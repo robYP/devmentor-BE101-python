@@ -1,5 +1,7 @@
 from typing import List
 
+from email import Email
+from line import Line
 from route import Route
 from telegram import Telegram
 from visitor import Visitor
@@ -17,8 +19,13 @@ class Event:
     def add(self, route: Route):
         self.routes.append(route)
 
-    def notify(self, user, msg):
+    def notify(self, user):
         self.user = user
 
         for route in self.routes:
-            route.send(f" {self.user.name} {msg}")
+            route.send(f" {self.user.name} {self.user.language.get_msg(self.event_name)}")
+
+    def notify_CNY(self, users: List):
+        line = Line()
+        for user in users:
+            line.send(user.language.get_msg(self.event_name))
