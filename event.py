@@ -17,8 +17,8 @@ class Event:
     def add(self, route: Route):
         self.routes.append(route)
 
-    def notify(self, user):
+    def notify(self, user, msg):
         self.user = user
 
         for route in self.routes:
-            route.send(f" {self.user.name} {self.user.language.get_msg(self.event_name)}")
+            route.send(f" {self.user.name} {msg}")
