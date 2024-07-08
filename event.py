@@ -24,8 +24,3 @@ class Event:
 
         for route in self.routes:
             route.send(f" {self.user.name} {self.user.language.get_msg(self.event_name)}")
-
-    def notify_CNY(self, users):
-        line = Line()
-        for user in users:
-            line.send(user.language.get_msg(self.event_name))

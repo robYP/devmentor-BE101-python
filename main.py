@@ -48,8 +48,9 @@ def main(name):
     cancel.notify(user=robert)
 
     line_cny_msg = Event("ChineseNewYear")
-    users = [jonny, robert]
-    line_cny_msg.notify_CNY(users)
+    line_cny_msg.add(line)
+    line_cny_msg.notify(user=robert)
+    line_cny_msg.notify(user=jonny)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
