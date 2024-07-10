@@ -39,7 +39,6 @@ def main(name):
     subscribe = Event("subscribe")
     subscribe.add(email)
     subscribe.add(telegram)
-    signup.add(line)
     subscribe.notify(user=jonny)
 
     cancel = Event("cancel")
