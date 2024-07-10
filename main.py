@@ -4,6 +4,8 @@ from typing import List
 from email import Email
 from event import Event
 from language import Language
+from line import Line
+from route import Route
 from sms import Sms
 from student import Student
 from telegram import Telegram
@@ -27,6 +29,7 @@ def main(name):
     telegram = Telegram()
     email = Email()
     sms = Sms()
+    line = Line()
 
     signup = Event("signup")
     signup.add(sms)
@@ -41,8 +44,12 @@ def main(name):
     cancel = Event("cancel")
     cancel.add(email)
     cancel.add(telegram)
-    cancel.notify(user=jonny)
+    cancel.notify(user=robert)
 
+    line_cny_msg = Event("ChineseNewYear")
+    line_cny_msg.add(line)
+    line_cny_msg.notify(user=robert)
+    line_cny_msg.notify(user=jonny)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

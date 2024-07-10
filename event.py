@@ -1,5 +1,7 @@
 from typing import List
 
+from email import Email
+from line import Line
 from route import Route
 from telegram import Telegram
 from visitor import Visitor

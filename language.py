@@ -8,12 +8,14 @@ class Language():
             "enus": {
                 "signup": "signed up SUCCESSFULLY",
                 "subscribe": "subscribed SUCCESSFULLY",
-                "cancel": "cancelled SUCCESSFULLY"
+                "cancel": "cancelled SUCCESSFULLY",
+                "ChineseNewYear": "Happy Chinese New Year"
             },
             "zhtw": {
                 "signup": "註冊成功",
                 "subscribe": "訂閱成功",
-                "cancel": "取消成功"
+                "cancel": "取消成功",
+                "ChineseNewYear": "新年快樂！"
             }
         }
 
